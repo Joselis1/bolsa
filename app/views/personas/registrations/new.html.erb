@@ -32,7 +32,7 @@
     <%= f.text_field :telefono, autofocus: true, autocomplete: "Teléfono" %>
   </div>
 
-    <div class="field">
+  <div class="field">
     <%= f.label :genero %>
     <%= collection_select(:personas, :genero_id, Genero.all, :id, :nombre, prompt: true) %>
   </div>

@@ -41,7 +41,7 @@
   |
 <% end %> 
 <% if persona_signed_in? %> 
-  <b>Boton postular</b>
+  <%= link_to "Postular", "javascript:(alert('Postulado Satisfactoriamente'))", class: "btn btn-outline-dark" %>
   |
 <% end %> 
 <%= link_to "Volver", ofertas_path, class: "btn btn-outline-dark" %>

@@ -8,9 +8,39 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre, autofocus: true, autocomplete: "Nombre" %>
+  </div><br>
+
+  <div class="field">
+    <%= f.label :rut %><br />
+    <%= f.text_field :rut, disabled: true, autocomplete: "rut" %>
+  </div><br>
+
+  <div class="field">
+    <%= f.label :'Fecha de Nacimiento' %><br />
+    <%= f.datetime_select :fnac, autofocus: true, autocomplete: "Fecha de Nacimiento" %>
+  </div><br>
+
+  <div class="field">
+    <%= f.label :telefono %><br />
+    <%= f.text_field :telefono, autofocus: true, autocomplete: "Teléfono" %>
+  </div><br>
+
+  <div class="field">
+    <%= f.label :genero %>
+    <%= collection_select(:personas, :genero_id, Genero.all, :id, :nombre, prompt: true) %>
+  </div><br>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+  </div><br>
+
+  <div class="field">
+    <%= f.label :curriculum %> 
+    <input type="checkbox" value="true" checked>
+  </div><br>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>

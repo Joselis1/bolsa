@@ -24,7 +24,10 @@
         <td>Entre $<%= oferta.salario_min %> a $<%= oferta.salario_max %> CLP.</td>
         <td><%= oferta.fecha_inicio %></td>
         <td><%= oferta.modalidad %></td>
-        <% if empresa_signed_in? %>
+        <% if persona_signed_in? %>
+        <td><%= link_to "Ver", oferta, class: "btn btn-outline-dark" %></td>
+        <% end
+           if empresa_signed_in? %>
         <td><%= link_to "Ver", oferta, class: "btn btn-outline-dark" %></td>
         <td><%= link_to "Editar", edit_oferta_path(oferta), class: "btn btn-outline-dark" %></td>
         <td><%= link_to "Eliminar", oferta, method: :delete, data: { confirm: "¿Estás seguro?" }, class: "btn btn-outline-dark" %></td>
@@ -44,5 +47,6 @@
 
 <%= link_to "Buscar", search_ofertas_path, class: "btn btn-outline-dark" %>
 <%= link_to "Volver", :back, class: "btn btn-outline-dark" %>
+<% if persona_signed_in? %>
 <%= link_to "Editar", edit_persona_registration_path, class: "btn btn-outline-dark" %>
-
+<% end %>

@@ -59,6 +59,32 @@ Empresa.create(
   ]
 )
 
+Persona.create(
+  [
+    {
+      rut: "33333333-1",
+      email: "usuario@uno.cl",
+      password: 123456,
+      nombre: "Usuario1",
+      fnac: "1988-04-25",
+      genero: "Femenino",
+      telefono: 888888888,
+      curriculum: "cv.pdf",
+    },
+    {
+      rut: "44444444-1",
+      email: "usuario@dos.cl",
+      password: 123456,
+      nombre: "Usuario2",
+      fnac: "1998-04-05",
+      genero: "Masculino",
+      telefono: 888888888,
+      curriculum: "cv.docx",
+    },
+
+  ]
+)
+
 5.times do
   Oferta.create(
     [
