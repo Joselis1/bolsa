@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+
+<p id="notice"><%= notice %></p>
+
+<h2>CARGO DE: <%= @ofertum.cargo.upcase %> </h2>
+<br>
+
+<p>
+  <strong>Descripción:</strong>
+  <%= @ofertum.descripcion %>
+</p>
+
+<p>
+  <strong>Vacantes:</strong>
+  <%= @ofertum.cant_vacantes %>
+</p>
+
+<p>
+  <strong>Salario mínimo:</strong>
+  <%= @ofertum.salario_min %>
+</p>
+
+<p>
+  <strong>Salario máximo:</strong>
+  <%= @ofertum.salario_max %>
+</p>
+
+<p>
+  <strong>Fecha inicio:</strong>
+  <%= @ofertum.fecha_inicio %>
+</p>
+
+<% if empresa_signed_in? %> 
+  <%= link_to "Editar", edit_ofertum_path(@ofertum), class: "btn btn-outline-dark" %>
+  |
+<% end %>
+
+<% if persona_signed_in? %> 
+  <b>Boton postular</b>
+  |
+<% end %>
+
+<%= link_to "Volver", oferta_path, class: "btn btn-outline-dark" %>
+
+        </div>
+    </div>
+</div>

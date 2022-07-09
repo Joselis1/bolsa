@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+
+<%= form_with(model: ofertum) do |form| %>
+  <% if ofertum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ofertum.errors.count, "error") %> prohibited this ofertum from being saved:</h2>
+
+      <ul>
+        <% ofertum.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cargo %>
+    <%= form.text_field :cargo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_area :descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cant_vacantes %>
+    <%= form.number_field :cant_vacantes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salario_min %>
+    <%= form.number_field :salario_min %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salario_max %>
+    <%= form.number_field :salario_max %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_inicio %>
+    <%= form.datetime_select :fecha_inicio %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+        </div>
+    </div>
+</div>

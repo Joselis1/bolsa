@@ -1,0 +1,45 @@
+<h1>Nueva Oferta Laboral</h1>
+
+
+<%= form_with(model: @oferta) do |form| %>
+  
+
+  <div class="field">
+    <%= form.label :cargo %>
+    <%= form.text_field :cargo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_area :descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cant_vacantes %>
+    <%= form.number_field :cant_vacantes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_inicio %>
+    <%= form.datetime_select :fecha_inicio %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :salario_min %>
+    <%= form.number_field :salario_min %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salario_max %>
+    <%= form.number_field :salario_max %>
+  </div>
+
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+<%= link_to "Volver", oferta_path, class: "btn btn-outline-dark" %>
