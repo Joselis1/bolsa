@@ -29,10 +29,11 @@
                 <%= link_to "Inicio", root_path, class: "btn btn-outline-dark" %> 
                 <%= link_to "Registar Empresa", new_empresa_registration_path, class: "btn btn-outline-dark" %> 
                 <%= link_to "Registar Persona", new_persona_registration_path, class: "btn btn-outline-dark" %> 
-                <%= link_to "Log in Empresa", new_empresa_session_path, class: "btn btn-outline-dark" %>
-                <%= link_to "Log in Persona", new_persona_session_path, class: "btn btn-outline-dark" %>
+                <%= link_to "Login Empresa", new_empresa_session_path, class: "btn btn-outline-dark" %>
+                <%= link_to "Login Persona", new_persona_session_path, class: "btn btn-outline-dark" %>
             </div>
         <% end %>
     <%= yield %>
+	<div id="reservado"><br>&copy; Todos los Derechos Reservados • 2022 • Joselis Briceño</div>
   </body>
 </html>
