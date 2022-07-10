@@ -34,15 +34,15 @@
 
           <p>
             <strong>Modalidad:</strong>
-            <%= @oferta.modalidad_id %>
+            <%= @oferta.modalidad_trabajo %>
           </p>
           <% if empresa_signed_in? %> 
-              <%= link_to "Editar", edit_oferta_path(@oferta) %>
-            |
+              <%= link_to "Editar", edit_oferta_path(@oferta), class: "btn btn-outline-dark" %>
+            
           <% end %> 
               <% if persona_signed_in? %> 
               <%= link_to "Postular", "javascript:(alert('Postulado Satisfactoriamente'))", class: "btn btn-outline-dark" %>
-            |
+            
           <% end %> 
           <%= link_to "Volver", ofertas_path, class: "btn btn-outline-dark" %>
 

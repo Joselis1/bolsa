@@ -53,8 +53,8 @@
         <br>
 
         <div class="field">
-          <%= form.label :modalidad %>
-          <%= collection_select(:ofertas, :modalidad_id, Modalidad.all, :id, :nombre, prompt: true) %>
+          <%= form.label :modalidad_trabajo %>
+          <%= collection_select(:ofertas, :modalidad_trabajo, Modalidad.all, :nombre, :nombre, prompt: true) %>
         </div>
         <br>
 
