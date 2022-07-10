@@ -1,24 +1,11 @@
-# README
+# Log in
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Datos para inicio de sesón
 
-Things you may want to cover:
+* PERSONAS
+      email: "usuario@uno.cl",
+      password: 123456
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* EMPRESAS
+      email: "admin@aiep.cl",
+      password: 123456
